@@ -1,11 +1,12 @@
 /* File: Tienda de bolsos/style.css */
-    body {
-        font-family: 'Calibri', sans-serif;
-    }
-    .titulo {
-        font-family: 'Montserrat', sans-serif;
-    }
-#carrousel{
+    #carrousel{
     background-image: url(imagenes/imagen\ 3\,\ bolsos\ carrousel.webp);
-    background-position: 80%;
+    background-position: 30%;
+    height: 500px;
+}
+h1, h2, .titulo {
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  font-family: 'Calibri', sans-serif;
 }
