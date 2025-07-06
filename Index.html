@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Demo | Página con Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Calibri&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Calibri', sans-serif;
+        }
+
+        .titulo {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+    <style>
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease forwards;
+        }
+    </style>
+
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- Encabezado -->
+    <header class="bg-rose-100 p-6 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-rose-600 titulo">Bolsos Únicos</h1>
+            <nav class="flex items-center space-x-4">
+                <a href="#modelos" class="text-gray-700 hover:text-rose-500 titulo">Modelos</a>
+                <a href="#pedido" class="text-gray-700 hover:text-rose-500 titulo">Pedido</a>
+                <a href="#contacto" class="text-gray-700 hover:text-rose-500 titulo">Contacto</a>
+                <div class="relative cursor-pointer text-gray-700 hover:text-rose-500 hover:animate-bounce">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4" />
+                        <circle cx="7" cy="21" r="1" />
+                        <circle cx="17" cy="21" r="1" />
+                    </svg>
+                    <span
+                        class="absolute -top-2 -right-2 bg-rose-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center font-bold">0</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="carrousel" class="bg-rose-50 py-20 text-center fade-in-up">
+        <h2 class="text-4xl font-bold mb-4 text-rose-600">Bolsos de Crochet Artesanales</h2>
+        <p class="text-lg text-white">Diseños únicos, hechos a mano, personalizables a tu estilo.</p>
+        <a href="#pedido"
+            class="mt-6 inline-block bg-rose-600 text-white px-6 py-3 rounded hover:bg-rose-500 transition transform hover:scale-105 duration-300">Haz
+            tu
+            pedido</a>
+    </section>
+
+    <!-- Modelos -->
+    <section id="modelos" class="py-16 bg-white fade-in-up">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-semibold text-center mb-8 text-rose-700">Nuestros Modelos</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+                <!-- Modelo 1 -->
+                <div class="bg-rose-50 p-4 rounded-lg shadow">
+                    <div class="w-full h-96 overflow-hidden rounded mb-4">
+                        <img src="imagenes/Imagen 1, bolsos.webp" alt="Modelo 1" class="w-full h-full object-cover" />
+                    </div>
+                    <h4 class="text-xl font-semibold text-center">Bolso Boho</h4>
+                    <p class="text-sm text-gray-600 text-center">Ideal para días relajados y looks boho.</p>
+                </div>
+
+                <!-- Modelo 2 -->
+                <div class="bg-rose-50 p-4 rounded-lg shadow">
+                    <div class="w-full h-96 overflow-hidden rounded mb-4">
+                        <img src="imagenes/Imagen 2, bolsos.webp" alt="Modelo 2" class="w-full h-full object-cover" />
+                    </div>
+                    <h4 class="text-xl font-semibold text-center">Bolso Bandolera</h4>
+                    <p class="text-sm text-gray-600 text-center">Comodidad y estilo para el día a día.</p>
+                </div>
+
+                <!-- Modelo 3 -->
+                <div class="bg-rose-50 p-4 rounded-lg shadow">
+                    <div class="w-full h-96 overflow-hidden rounded mb-4">
+                        <img src="imagenes/imagen 4, bolsos.webp" alt="Modelo 3" class="w-full h-full object-cover" />
+                    </div>
+                    <h4 class="text-xl font-semibold text-center">Bolso Shopper</h4>
+                    <p class="text-sm text-gray-600 text-center">Espacioso y versátil, ideal para todo.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Acerca de nosotros -->
+    <section
+        class="min-h-screen bg-rose-600 text-white py-16 px-6 flex flex-col md:flex-row items-center justify-between gap-8 fade-in-up">
+        <!-- Imagen lado izquierdo -->
+        <div class="w-full md:w-5/12 flex justify-center h-full md:justify-end">
+            <img src="https://images.unsplash.com/photo-1654707634812-3ce01a6258f9?q=80&w=760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="About Me" class="w-72 h-full md:w-80 lg:w-96 object-cover rounded-lg shadow-lg" />
+        </div>
+
+        <!-- Lado derecho: Contenido -->
+        <div class="w-full md:w-7/12 text-center md:text-left relative">
+            <!-- Texto vertical -->
+            <div
+                class="absolute left-1/2 -translate-x-1/2 top-0 md:left-0 md:top-1/2 md:-translate-y-1/2 md:rotate-[-90deg] text-sm tracking-widest">
+                <div class="flex items-center justify-center gap-4">
+                    <div class="w-16 h-[2px] bg-white"></div>
+                    <p>Mas de nosotros</p>
+                </div>
+
+            </div>
+
+            <!-- Main Heading -->
+            <h2 class="text-3xl md:text-5xl font-bold leading-tight mb-4 pl-10">
+                Sobre Nosotros
+            </h2>
+
+            <!-- Description -->
+            <p class="text-gray-300 mb-6 text-sm md:text-base leading-relaxed max-w-2xl mx-auto md:mx-0 pl-10">
+                En Bolsos Únicos, creamos bolsos de crochet artesanales con dedicación y amor por los detalles. Cada
+                pieza es única y personalizable, pensada para acompañarte en tu día a día con estilo y originalidad.
+                Nuestro objetivo es ofrecerte productos de calidad hechos a mano, fusionando tradición y tendencias
+                modernas.
+            </p>
+            <p class="text-gray-300 mb-6 text-sm md:text-base leading-relaxed max-w-2xl mx-auto md:mx-0 pl-10">Además, nos comprometemos con la sostenibilidad, utilizando materiales ecoamigables y técnicas
+                responsables que respetan el medio ambiente. Queremos que cada bolso no solo refleje tu personalidad,
+                sino también un compromiso con un futuro más consciente y lleno de belleza.</p>
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pl-10">
+                <a href="#modelos"
+                    class="bg-rose-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-rose-400 text-center transition transform hover:scale-105 duration-300">
+                    Ver Modelos
+                </a>
+                <a href="#pedido"
+                    class="border border-white text-white font-semibold py-2 px-4 rounded-lg hover:bg-rose-700/10 text-center transition transform hover:scale-105 duration-300">
+                    Personaliza el tuyo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pedido -->
+    <section id="pedido" class="bg-rose-50 py-16">
+        <div class="container mx-auto px-4 max-w-xl">
+            <h3 class="text-2xl font-bold mb-6 text-center text-rose-700">Haz tu Pedido Personalizado</h3>
+            <form class="bg-white p-6 rounded-lg shadow-md space-y-4">
+                <input type="text" placeholder="Tu nombre" class="w-full border border-gray-300 rounded px-4 py-2" />
+                <select class="w-full border border-gray-300 rounded px-4 py-2">
+                    <option>Selecciona un modelo</option>
+                    <option>Bolso Boho</option>
+                    <option>Bolso Bandolera</option>
+                    <option>Bolso Shopper</option>
+                </select>
+                <input type="text" placeholder="Color preferido"
+                    class="w-full border border-gray-300 rounded px-4 py-2" />
+                <textarea placeholder="Comentarios adicionales"
+                    class="w-full border border-gray-300 rounded px-4 py-2"></textarea>
+                <button type="submit" class="bg-rose-600 text-white px-6 py-2 rounded hover:bg-rose-500">
+                    Enviar Pedido
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-16 bg-[#0F172A] text-white">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl font-bold sm:text-4xl text-white">Lo que dicen nuestros clientes</h2>
+                <p class="max-w-2xl mx-auto mt-2 text-lg text-gray-300">
+                    Opiniones reales de quienes confiaron en nuestro servicio
+                </p>
+            </div>
+
+            <!-- Grid de testimonios -->
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Testimonio -->
+                <div
+                    class="p-6 bg-[#1E293B] rounded-xl shadow-md hover:shadow-lg transition-transform hover:-translate-y-1">
+                    <div class="flex items-start mb-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/6.jpg"
+                            alt="Perfil">
+                        <div>
+                            <h3 class="font-bold text-white">Laura Fernández</h3>
+                            <p class="text-sm text-gray-400">@laura_design</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">El servicio fue excelente, y el diseño final superó mis expectativas. ¡Muy
+                        recomendable!</p>
+                </div>
+
+                <!-- Otro testimonio -->
+                <div
+                    class="p-6 bg-[#1E293B] rounded-xl shadow-md hover:shadow-lg transition-transform hover:-translate-y-1">
+                    <div class="flex items-start mb-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/24.jpg"
+                            alt="Perfil">
+                        <div>
+                            <h3 class="font-bold text-white">Martín González</h3>
+                            <p class="text-sm text-gray-400">@martin_dev</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">Destaco la atención personalizada y la rapidez con la que resolvieron cada
+                        detalle de mi bolso.</p>
+                </div>
+
+                <!-- Otro testimonio -->
+                <div
+                    class="p-6 bg-[#1E293B] rounded-xl shadow-md hover:shadow-lg transition-transform hover:-translate-y-1">
+                    <div class="flex items-start mb-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/54.jpg"
+                            alt="Perfil">
+                        <div>
+                            <h3 class="font-bold text-white">Andrés Torres</h3>
+                            <p class="text-sm text-gray-400">@torres_ai</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">Desde que recibí mi bolso, no dejo de usarlo. La calidad es impresionante
+                        y el diseño es justo lo que buscaba.</p>
+                </div>
+                <!-- Testimonio 1 -->
+                <div
+                    class="p-6 bg-[#1E293B] rounded-xl shadow-md hover:shadow-lg transition-transform hover:-translate-y-1">
+                    <div class="flex items-start mb-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/12.jpg"
+                            alt="Perfil">
+                        <div>
+                            <h3 class="font-bold text-white">Mariana Ríos</h3>
+                            <p class="text-sm text-gray-400">@marianarios</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">Increíble el trato que recibí. Me ayudaron a elegir el modelo perfecto y
+                        el bolso llegó justo como la imaginaba.</p>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div
+                    class="p-6 bg-[#1E293B] rounded-xl shadow-md hover:shadow-lg transition-transform hover:-translate-y-1">
+                    <div class="flex items-start mb-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/32.jpg"
+                            alt="Perfil">
+                        <div>
+                            <h3 class="font-bold text-white">Santiago Molina</h3>
+                            <p class="text-sm text-gray-400">@santimol</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">Nos ayudaron a elegir el bolso ideal para nuestro evento. La
+                        atención fue excelente y el resultado final fue espectacular. ¡Todos nos preguntaron dónde lo
+                        Compramos!</p>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div
+                    class="p-6 bg-[#1E293B] rounded-xl shadow-md hover:shadow-lg transition-transform hover:-translate-y-1">
+                    <div class="flex items-start mb-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/81.jpg"
+                            alt="Perfil">
+                        <div>
+                            <h3 class="font-bold text-white">Julián Vega</h3>
+                            <p class="text-sm text-gray-400">@julivega</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">Recomiendo totalmente el servicio.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--Seccion FAQ-->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h3 class="text-3xl font-semibold text-center text-rose-700 mb-10">Preguntas Frecuentes</h3>
+
+            <div class="space-y-4">
+                <!-- Pregunta 1 -->
+                <div class="border rounded-lg overflow-hidden">
+                    <button
+                        class="w-full text-left px-6 py-4 font-semibold text-rose-700 flex justify-between items-center faq-toggle">
+                        ¿Cuánto tarda en llegar mi pedido?
+                        <span class="text-2xl leading-none">+</span>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-gray-600">
+                        Los pedidos personalizados suelen demorar entre 5 y 10 días hábiles según el modelo y la
+                        ubicación.
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="border rounded-lg overflow-hidden">
+                    <button
+                        class="w-full text-left px-6 py-4 font-semibold text-rose-700 flex justify-between items-center faq-toggle">
+                        ¿Puedo elegir los colores del bolso?
+                        <span class="text-2xl leading-none">+</span>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-gray-600">
+                        ¡Sí! En el formulario de pedido podés indicar tu color preferido o combinar varios tonos.
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="border rounded-lg overflow-hidden">
+                    <button
+                        class="w-full text-left px-6 py-4 font-semibold text-rose-700 flex justify-between items-center faq-toggle">
+                        ¿Hacen envíos a todo el país?
+                        <span class="text-2xl leading-none">+</span>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-gray-600">
+                        Enviamos a todo Argentina mediante Correo Argentino o mensajería privada. También hacemos
+                        entregas en mano en nuestra zona.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script FAQ toggle -->
+    <script>
+        document.querySelectorAll('.faq-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const isOpen = !content.classList.contains('hidden');
+
+                // Cierra todos
+                document.querySelectorAll('.faq-toggle + div').forEach(div => div.classList.add('hidden'));
+                document.querySelectorAll('.faq-toggle span').forEach(span => span.textContent = '+');
+
+                // Abre solo si estaba cerrado
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    btn.querySelector('span').textContent = '–';
+                }
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-rose-600 text-gray-300">
+        <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+            <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+
+                <!-- Logo y descripción -->
+                <div class="sm:col-span-2">
+                    <a href="/" aria-label="Inicio" title="Buscatudistribuidor" class="inline-flex items-center">
+                        <svg class="w-8 text-rose-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2"
+                            stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
+                            <rect x="3" y="1" width="7" height="12"></rect>
+                            <rect x="3" y="17" width="7" height="6"></rect>
+                            <rect x="14" y="1" width="7" height="6"></rect>
+                            <rect x="14" y="11" width="7" height="12"></rect>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold tracking-wide text-white uppercase">Bolsos unicos</span>
+                    </a>
+                    <div class="mt-6 lg:max-w-sm">
+                        <p class="text-sm text-white">
+                            Encuentra fácilmente bolsos únicos y personalizados a través de nuestra plataforma.
+                        </p>
+                        <p class="mt-4 text-sm text-white">
+                            Nuestros bolsos son hechos a mano con materiales de alta calidad, diseñados para durar y
+                            destacar en cualquier ocasión.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contacto -->
+                <div class="space-y-2 text-sm">
+                    <p class="text-base font-bold tracking-wide text-white">Contacto</p>
+                    <div class="flex">
+                        <p class="mr-1 text-white">Teléfono:</p>
+                        <a href="tel:+541123456789" aria-label="Teléfono" title="Teléfono" class="text-white">+54 11
+                            2345
+                            6789</a>
+                    </div>
+                    <div class="flex">
+                        <p class="mr-1 text-white">Email:</p>
+                        <a href="mailto:contacto@buscatudistribuidor.com" aria-label="Email" title="Email"
+                            class="text-white">contacto@Bolsosunicos.com</a>
+                    </div>
+                    <div class="flex">
+                        <p class="mr-1 text-white">Dirección:</p>
+                        <a href="https://goo.gl/maps/example" target="_blank" rel="noopener noreferrer"
+                            aria-label="Dirección" title="Dirección" class="text-white">
+                            Av. Distribuidores 123, Buenos Aires
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div>
+                    <span class="text-base font-bold tracking-wide text-white">Redes Sociales</span>
+                    <div class="flex items-center mt-1 space-x-3">
+                        <a href="https://twitter.com/tuusuario" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors duration-300"
+                            aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+                                <path
+                                    d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.951.564-2.005.974-3.127 1.195a4.916 4.916 0 00-8.384 4.482A13.94 13.94 0 011.671 3.149a4.916 4.916 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.917 4.917 0 004.59 3.417A9.867 9.867 0 010 21.542a13.94 13.94 0 007.548 2.209c9.057 0 14.01-7.506 14.01-14.01 0-.213-.005-.425-.014-.636A10.012 10.012 0 0024 4.557z" />
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/tuusuario" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors duration-300"
+                            aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+                                <path
+                                    d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zm8.75 1.5a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z" />
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/tuusuario" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors duration-300"
+                            aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+                                <path
+                                    d="M22.675 0h-21.35C.597 0 0 .597 0 1.333v21.333C0 23.403.597 24 1.325 24h11.5v-9.294H9.691v-3.622h3.134V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.466.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.31h3.59l-.467 3.622h-3.123V24h6.116c.728 0 1.325-.597 1.325-1.334V1.333C24 .597 23.403 0 22.675 0z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="mt-4 text-sm text-white">
+                        Bolsos unicos es una plataforma que conecta marcas y distribuidores para facilitar el acceso a
+                        productos de calidad. Nuestro objetivo es ofrecer un espacio confiable y eficiente para que
+                        encuentres lo que necesitas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t border-white lg:flex-row">
+                <p class="text-sm text-white">
+                    © 2025 Bolsos unicos. Todos los derechos reservados.
+                </p>
+                <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+                    <li>
+                        <a href="/faq"
+                            class="text-sm text-white transition-colors duration-300 hover:text-rose-400">Preguntas
+                            Frecuentes</a>
+                    </li>
+                    <li>
+                        <a href="/privacy"
+                            class="text-sm text-white transition-colors duration-300 hover:text-rose-400">Política de
+                            Privacidad</a>
+                    </li>
+                    <li>
+                        <a href="/terms"
+                            class="text-sm text-white transition-colors duration-300 hover:text-rose-400">Términos y
+                            Condiciones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
